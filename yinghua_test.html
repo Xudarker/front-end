@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>英华实验学校 - 应用中心</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .header {
+            background-color: #5b0505;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+        .user-info {
+            display: flex;
+            align-items: center;
+        }
+        .user-info span {
+            margin-right: 20px;
+        }
+        .logout {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+        .main-content {
+            display: flex;
+            padding: 20px;
+            gap: 20px;
+        }
+        .app-center {
+            flex: 2;
+        }
+        .news-feed {
+            flex: 1;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .section-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .section-title h2{
+            color: #5b0505;
+        }
+        .add-app {
+            background-color: #5b0505;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .app-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            gap: 30px;
+        }
+        .app-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .app-icon {
+            width: 50px;
+            height: 50px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+            margin-bottom: 5px;
+          
+        }
+        .news-item {
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+        .news-item:last-child {
+            border-bottom: none;
+        }
+        .news-date {
+            color: #888;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="/api/placeholder/30/30" alt="Logo">
+            <h1>英华实验学校</h1>
+        </div>
+        <div class="user-info">
+            <span>朱老师</span><span>|</span>
+            <button class="logout">退出 ⤴</button>
+        </div>
+    </header>
+    
+    <main class="main-content">
+        <section class="app-center">
+            <div class="section-title">
+                <h2>应用中心</h2>
+                <button class="add-app">+ 新增应用分类</button>
+            </div>
+            <div class="app-grid">
+                <div class="app-item">
+                    <div class="app-icon">📊</div>
+                    <span>PowerBI</span>
+                </div>
+                <div class="app-item">
+                    <div class="app-icon">📁</div>
+                    <span>合同档案管理</span>
+                </div>
+                <div class="app-item">
+                    <div class="app-icon">❤️</div>
+                    <span>家校通</span>
+                </div>
+                <div class="app-item">
+                    <div class="app-icon">📚</div>
+                    <span>图书馆管理系统</span>
+                </div>
+                <div class="app-item">
+                    <div class="app-icon">💖</div>
+                    <span>智校安</span>
+                </div>
+                <div class="app-item">
+                    <div class="app-icon">🖥️</div>
+                    <span>数据中台Portal</span>
+                </div>
+                <div class="app-item">
+                    <div class="app-icon">👤</div>
+                    <span>智学</span>
+                </div>
+                <div class="app-item">
+                    <div class="app-icon">🎓</div>
+                    <span>招生教务系统</span>
+                </div>
+                <div class="app-item">
+                    <div class="app-icon">👥</div>
+                    <span>希悦</span>
+                </div>
+                <div class="app-item">
+                    <div class="app-icon">🔐</div>
+                    <span>权付通</span>
+                </div>
+                <div class="app-item">
+                    <div class="app-icon">💼</div>
+                    <span>财务系统</span>
+                </div>
+                <div class="app-item">
+                    <div class="app-icon">📈</div>
+                    <span>Dashboard</span>
+                </div>
+            </div>
+        </section>
+        
+        <aside class="news-feed">
+            <h2>最新动态</h2>
+            <div class="news-item">
+                <h3>一天中的英华课堂，有多少种发现自我的方式？</h3>
+                <p>学科边界模糊了，学知识、好奇心、探索欲、学生们在这样的课堂中，不断发现...</p>
+                <span class="news-date">2023.11.23 14:22</span>
+            </div>
+            <div class="news-item">
+                <h3>一天中的英华课堂，有多少种发现自我的方式？</h3>
+                <p>学科边界模糊了，学知识、好奇心、探索欲、学生们在这样的课堂中，不断发现...</p>
+                <span class="news-date">2023.11.23 14:22</span>
+            </div>
+            <div class="news-item">
+                <h3>一天中的英华课堂，有多少种发现自我的方式？</h3>
+                <p>学科边界模糊了，学知识、好奇心、探索欲、学生们在这样的课堂中，不断发现...</p>
+                <span class="news-date">2023.11.23 14:22</span>
+            </div>
+            <div class="news-item">
+                <h3>一天中的英华课堂，有多少种发现自我的方式？</h3>
+                <p>学科边界模糊了，学知识、好奇心、探索欲、学生们在这样的课堂中，不断发现...</p>
+                <span class="news-date">2023.11.23 14:22</span>
+            </div>
+            <div class="news-item">
+                <h3>一天中的英华课堂，有多少种发现自我的方式？</h3>
+                <p>学科边界模糊了，学知识、好奇心、探索欲、学生们在这样的课堂中，不断发现...</p>
+                <span class="news-date">2023.11.23 14:22</span>
+            </div>
+        </aside>
+    </main>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Event Handling</title>
+    <style>
+        .boxM {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    .boxM .box {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            margin: 20px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1>{{ message }}</h1>
+        <br>
+      <div class="boxM">
+        <div class="box" @mouseover="handleEvent">mouseover</div>
+        <div class="box" @mouseleave="handleEvent">mouseleave</div>
+        <div class="box" @click="handleEvent">click</div>
+        <div class="box" @dblclick="handleEvent">dblclick</div>
+        <div class="box" @mousemove="handleEvent">mousemove</div>
+        <div class="box" @mousedown="handleEvent">mousedown</div>
+      </div>
+    </div>
+
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    message: 'Vue Event Handling',
+                    age:23,
+                    name:'zhangsan',
+                    bookshowing:true
+
+                }
+            },
+            methods: {
+                handleEvent(event) {
+                    console.log(`Event type: ${event.type} on element with text: ${event.target.textContent}`);
+                    this.message = `Last event: ${event.type} on ${event.target.textContent}`;
+                },
+                bookshowingToggle(){
+                    this.bookshowing = !this.bookshowing
+                }
+            }
+        });
+
+        app.mount('#app');
+    </script>
+</body>
+</html>
